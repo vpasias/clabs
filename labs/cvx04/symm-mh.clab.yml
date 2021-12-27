@@ -1,4 +1,4 @@
-name: citc # Cumulus In The Cloud -- EVPN Multihoming Lab https://gitlab.com/cumulus-consulting/goldenturtle/cumulus_ansible_modules/-/tree/master/inventories/evpn_mh
+name: pbos # EVPN Multihoming Lab https://gitlab.com/cumulus-consulting/goldenturtle/cumulus_ansible_modules/-/tree/master/inventories/evpn_mh
 
 topology:
   nodes:
