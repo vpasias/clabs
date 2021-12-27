@@ -4,7 +4,7 @@ topology:
   nodes:
     border01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/border01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/border01/etc/frr/daemons:/etc/frr/daemons
@@ -12,7 +12,7 @@ topology:
 
     border02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/border02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/border02/etc/frr/daemons:/etc/frr/daemons
@@ -20,7 +20,7 @@ topology:
 
     spine01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/spine01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/spine01/etc/frr/daemons:/etc/frr/daemons
@@ -28,7 +28,7 @@ topology:
 
     spine02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/spine02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/spine02/etc/frr/daemons:/etc/frr/daemons
@@ -36,7 +36,7 @@ topology:
 
     leaf01:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/leaf01/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/leaf01/etc/frr/daemons:/etc/frr/daemons
@@ -44,7 +44,7 @@ topology:
 
     leaf02:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/leaf02/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/leaf02/etc/frr/daemons:/etc/frr/daemons
@@ -52,7 +52,7 @@ topology:
 
     leaf03:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/leaf03/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/leaf03/etc/frr/daemons:/etc/frr/daemons
@@ -60,7 +60,7 @@ topology:
 
     leaf04:
       kind: cvx
-      image: networkop/cx:4.3.0
+      image: networkop/cx:4.4.0
       binds:
       - evpn-mh/leaf04/etc/network/interfaces:/etc/network/interfaces
       - evpn-mh/leaf04/etc/frr/daemons:/etc/frr/daemons
