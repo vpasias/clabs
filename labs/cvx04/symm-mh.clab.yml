@@ -122,14 +122,14 @@ topology:
     - endpoints: ["spine01:swp6", "border02:swp51"]
     - endpoints: ["spine02:swp6", "border02:swp52"]
 
-    - endpoints: ["l1s1:vens1", "leaf01:swp1"]
-    - endpoints: ["l2s1:vens2", "leaf02:swp1"]
+    - endpoints: ["l1s1:int1", "leaf01:swp1"]
+    - endpoints: ["l2s1:int2", "leaf02:swp1"]
 
-    - endpoints: ["l1s2:vens1", "leaf01:swp2"]
-    - endpoints: ["l2s2:vens2", "leaf02:swp2"]
+    - endpoints: ["l1s2:int3", "leaf01:swp2"]
+    - endpoints: ["l2s2:int4", "leaf02:swp2"]
 
-    - endpoints: ["l1s3:vens1", "leaf01:swp3"]
-    - endpoints: ["l2s3:vens2", "leaf02:swp3"]
+    - endpoints: ["l1s3:int5", "leaf01:swp3"]
+    - endpoints: ["l2s3:int6", "leaf02:swp3"]
 
     - endpoints: ["server01:eth1", "leaf03:swp1"]
     - endpoints: ["server01:eth2", "leaf04:swp1"]
