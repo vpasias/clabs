@@ -78,8 +78,8 @@ iface vniBLUE
 
 auto vlan10
 iface vlan10
-    address 10.1.10.3/24
-    address-virtual 00:00:00:00:00:10 10.1.10.1/24
+    address 192.168.22.3/24
+    address-virtual 00:00:00:00:00:10 192.168.22.1/24
     vrf RED
     vlan-raw-device bridge
     vlan-id 10
@@ -150,7 +150,7 @@ auto bond2
 iface bond2
     bond-slaves swp2 
     es-sys-mac 44:38:39:BE:EF:AA
-    bridge-access 20
+    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
@@ -163,7 +163,7 @@ auto bond3
 iface bond3
     bond-slaves swp3 
     es-sys-mac 44:38:39:BE:EF:AA
-    bridge-access 30
+    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
