@@ -137,7 +137,7 @@ auto bond1
 iface bond1
     bond-slaves swp1 
     es-sys-mac 44:38:39:BE:EF:AA
-    bridge-access 10
+#    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
@@ -150,7 +150,7 @@ auto bond2
 iface bond2
     bond-slaves swp2 
     es-sys-mac 44:38:39:BE:EF:AA
-    bridge-access 10
+#    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
@@ -163,7 +163,7 @@ auto bond3
 iface bond3
     bond-slaves swp3 
     es-sys-mac 44:38:39:BE:EF:AA
-    bridge-access 10
+#    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
