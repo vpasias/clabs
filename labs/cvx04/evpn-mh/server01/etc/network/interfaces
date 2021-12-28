@@ -32,10 +32,4 @@ iface uplink.10 inet static
   address 192.168.22.11
   netmask 255.255.255.0
   mtu 9000
-  bond-slaves eth1 eth2
-  bond-mode 802.3ad
-  bond-miimon 100
-  bond-lacp-rate 1
-  bond-min-links 1
-  bond-xmit-hash-policy layer3+4
   post-up ip route add 192.0.0.0/8 via 192.168.22.1
