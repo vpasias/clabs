@@ -18,7 +18,17 @@ iface eth2 inet manual
   post-up ip link set promisc on dev eth2
 
 auto uplink
-iface uplink inet static
+iface uplink inet manual
+  mtu 9000
+  bond-slaves eth1 eth2
+  bond-mode 802.3ad
+  bond-miimon 100
+  bond-lacp-rate 1
+  bond-min-links 1
+  bond-xmit-hash-policy layer3+4
+
+auto uplink.10
+iface uplink.10 inet static
   address 192.168.22.11
   netmask 255.255.255.0
   mtu 9000
