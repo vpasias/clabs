@@ -204,7 +204,8 @@ iface bond1
 #    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
-    mstpctl-bpduguard yes
+#    mstpctl-bpduguard yes
+    mstpctl-portpathcost 0
 #   mstpctl-portadminedge yes
     mstpctl-portnetwork yes
 
@@ -218,7 +219,8 @@ iface bond2
 #    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
-    mstpctl-bpduguard yes
+#    mstpctl-bpduguard yes
+    mstpctl-portpathcost 0
 #   mstpctl-portadminedge yes
     mstpctl-portnetwork yes
 
@@ -232,6 +234,7 @@ iface bond3
 #    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
-    mstpctl-bpduguard yes
+#    mstpctl-bpduguard yes
+    mstpctl-portpathcost 0
 #   mstpctl-portadminedge yes
     mstpctl-portnetwork yes
