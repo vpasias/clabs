@@ -24,8 +24,8 @@ iface BLUE
 
 auto bridge
 iface bridge
-    bridge-ports vni10 vni20 vni30 vniRED vniBLUE bond1 bond2 bond3 
-    bridge-vids 10 20 30  
+    bridge-ports vni10 vni20 vni30 vniRED vniBLUE bond1 bond2 bond3 vni5 vni100 vni200 vni300
+    bridge-vids 5 10 20 30 100 200 300
     bridge-vlan-aware yes
 
 auto vni10
@@ -57,6 +57,46 @@ iface vni30
     bridge-learning off
     bridge-arp-nd-suppress on
     vxlan-mcastgrp 239.1.1.30
+
+auto vni5
+iface vni5
+    bridge-access 5
+    vxlan-id 5
+    mstpctl-portbpdufilter yes
+    mstpctl-bpduguard yes
+    bridge-learning off
+    bridge-arp-nd-suppress on
+    vxlan-mcastgrp 239.1.1.5
+
+auto vni100
+iface vni100
+    bridge-access 100
+    vxlan-id 100
+    mstpctl-portbpdufilter yes
+    mstpctl-bpduguard yes
+    bridge-learning off
+    bridge-arp-nd-suppress on
+    vxlan-mcastgrp 239.1.1.100
+
+auto vni200
+iface vni200
+    bridge-access 200
+    vxlan-id 200
+    mstpctl-portbpdufilter yes
+    mstpctl-bpduguard yes
+    bridge-learning off
+    bridge-arp-nd-suppress on
+    vxlan-mcastgrp 239.1.1.200
+
+auto vni300
+iface vni300
+    bridge-access 300
+    vxlan-id 300
+    mstpctl-portbpdufilter yes
+    mstpctl-bpduguard yes
+    bridge-learning off
+    bridge-arp-nd-suppress on
+    vxlan-mcastgrp 239.1.1.249
 
 auto vniRED
 iface vniRED
@@ -99,6 +139,30 @@ iface vlan30
     vrf BLUE
     vlan-raw-device bridge
     vlan-id 30
+    
+auto vlan5
+iface vlan5
+    vrf RED
+    vlan-raw-device bridge
+    vlan-id 5
+
+auto vlan100
+iface vlan100
+    vrf RED
+    vlan-raw-device bridge
+    vlan-id 100
+
+auto vlan200
+iface vlan200
+    vrf RED
+    vlan-raw-device bridge
+    vlan-id 200
+
+auto vlan300
+iface vlan300
+    vrf RED
+    vlan-raw-device bridge
+    vlan-id 300
 
 auto vlan4001
 iface vlan4001
@@ -137,11 +201,12 @@ auto bond1
 iface bond1
     bond-slaves swp1 
     es-sys-mac 44:38:39:BE:EF:BB
-    bridge-access 10
+#    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
-    mstpctl-portadminedge yes
+#   mstpctl-portadminedge yes
+    mstpctl-portnetwork yes
 
 auto swp2
 iface swp2
@@ -150,11 +215,12 @@ auto bond2
 iface bond2
     bond-slaves swp2 
     es-sys-mac 44:38:39:BE:EF:BB
-    bridge-access 10
+#    bridge-access 10
     mtu 9000
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
-    mstpctl-portadminedge yes
+#   mstpctl-portadminedge yes
+    mstpctl-portnetwork yes
 
 auto swp3
 iface swp3
@@ -168,51 +234,3 @@ iface bond3
     bond-lacp-bypass-allow yes
     mstpctl-bpduguard yes
     mstpctl-portadminedge yes
-
-auto bond1.5
-iface bond1.5
-    bridge-access 10
-
-auto bond1.100
-iface bond1.100
-    bridge-access 10
-
-auto bond1.200
-iface bond1.200
-    bridge-access 10
-
-auto bond1.300
-iface bond1.300
-    bridge-access 10
-
-auto bond2.5
-iface bond2.5
-    bridge-access 10
-
-auto bond2.100
-iface bond2.100
-    bridge-access 10
-
-auto bond2.200
-iface bond2.200
-    bridge-access 10
-
-auto bond2.300
-iface bond2.300
-    bridge-access 10
-
-auto bond3.5
-iface bond3.5
-    bridge-access 10
-
-auto bond3.100
-iface bond3.100
-    bridge-access 10
-
-auto bond3.200
-iface bond3.200
-    bridge-access 10
-
-auto bond3.300
-iface bond3.300
-    bridge-access 10
