@@ -142,18 +142,24 @@ iface vlan30
     
 auto vlan5
 iface vlan5
+    address 192.168.21.5/24
+    address-virtual 00:00:00:00:00:05 192.168.21.1/24
     vrf RED
     vlan-raw-device bridge
     vlan-id 5
 
 auto vlan100
 iface vlan100
+    address 192.168.23.5/24
+    address-virtual 00:00:00:00:00:06 192.168.23.1/24
     vrf RED
     vlan-raw-device bridge
     vlan-id 100
 
 auto vlan200
 iface vlan200
+    address 192.168.25.5/24
+    address-virtual 00:00:00:00:00:07 192.168.25.1/24
     vrf RED
     vlan-raw-device bridge
     vlan-id 200
