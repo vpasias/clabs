@@ -5,7 +5,7 @@ topology:
     linux:
       image: networkop/host:ignite
 #      image: weaveworks/ignite-ubuntu:20.04
-#      kernel: weaveworks/ignite-kernel:5.10.77
+      kernel: weaveworks/ignite-kernel:5.10.77
       runtime: ignite
       sandbox: weaveworks/ignite:v0.10.0
   nodes:
