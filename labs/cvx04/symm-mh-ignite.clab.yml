@@ -1,4 +1,4 @@
-name: net
+name: citc # Cumulus In The Cloud -- EVPN Multihoming Lab https://gitlab.com/cumulus-consulting/goldenturtle/cumulus_ansible_modules/-/tree/master/inventories/evpn_mh
 
 topology:
   kinds:
@@ -12,95 +12,95 @@ topology:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/border01/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/border01/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/border01/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/border01/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/border01/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/border01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     border02:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/border02/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/border02/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/border02/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/border02/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/border02/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/border02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     spine01:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/spine01/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/spine01/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/spine01/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/spine01/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/spine01/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/spine01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     spine02:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/spine02/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/spine02/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/spine02/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/spine02/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/spine02/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/spine02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf01:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/leaf01/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/leaf01/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/leaf01/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/leaf01/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/leaf01/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/leaf01/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf02:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/leaf02/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/leaf02/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/leaf02/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/leaf02/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/leaf02/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/leaf02/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf03:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/leaf03/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/leaf03/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/leaf03/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/leaf03/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/leaf03/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/leaf03/etc/frr/frr.conf:/etc/frr/frr.conf
 
     leaf04:
       kind: cvx
       image: networkop/cx:4.3.0
       binds:
-      - evpn-mlag/leaf04/etc/network/interfaces:/etc/network/interfaces
-      - evpn-mlag/leaf04/etc/frr/daemons:/etc/frr/daemons
-      - evpn-mlag/leaf04/etc/frr/frr.conf:/etc/frr/frr.conf
+      - evpn-mh/leaf04/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/leaf04/etc/frr/daemons:/etc/frr/daemons
+      - evpn-mh/leaf04/etc/frr/frr.conf:/etc/frr/frr.conf
 
     server01:
       kind: linux
       binds:
-      - evpn-mlag/server01/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server01/etc/network/interfaces:/etc/network/interfaces
 
     server02:
       kind: linux
       binds:
-      - evpn-mlag/server02/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server02/etc/network/interfaces:/etc/network/interfaces
 
     server03:
       kind: linux
       binds:
-      - evpn-mlag/server03/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server03/etc/network/interfaces:/etc/network/interfaces
 
     server04:
       kind: linux
       binds:
-      - evpn-mlag/server04/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server04/etc/network/interfaces:/etc/network/interfaces
 
     server05:
       kind: linux
       binds:
-      - evpn-mlag/server05/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server05/etc/network/interfaces:/etc/network/interfaces
 
     server06:
       kind: linux
       binds:
-      - evpn-mlag/server06/etc/network/interfaces:/etc/network/interfaces
+      - evpn-mh/server06/etc/network/interfaces:/etc/network/interfaces
 
 
   links:
@@ -139,9 +139,3 @@ topology:
 
     - endpoints: ["server06:eth1", "leaf03:swp3"]
     - endpoints: ["server06:eth2", "leaf04:swp3"]
-
-    - endpoints: ["leaf01:swp49", "leaf02:swp49"]
-    - endpoints: ["leaf01:swp50", "leaf02:swp50"]
-
-    - endpoints: ["leaf03:swp49", "leaf04:swp49"]
-    - endpoints: ["leaf03:swp50", "leaf04:swp50"]
