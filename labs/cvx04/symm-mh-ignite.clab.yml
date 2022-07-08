@@ -1,6 +1,12 @@
-name: citc # Cumulus In The Cloud -- EVPN Multihoming Lab https://gitlab.com/cumulus-consulting/goldenturtle/cumulus_ansible_modules/-/tree/master/inventories/evpn_mh
+name: net
 
 topology:
+  kinds:
+    linux:
+      image: weaveworks/ignite-ubuntu:20.04
+      kernel: weaveworks/ignite-kernel:5.10.77
+      runtime: ignite
+      sandbox: weaveworks/ignite:v0.10.0
   nodes:
     border01:
       kind: cvx
@@ -68,37 +74,31 @@ topology:
 
     server01:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server01/etc/network/interfaces:/etc/network/interfaces
 
     server02:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server02/etc/network/interfaces:/etc/network/interfaces
 
     server03:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server03/etc/network/interfaces:/etc/network/interfaces
 
     server04:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server04/etc/network/interfaces:/etc/network/interfaces
 
     server05:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server05/etc/network/interfaces:/etc/network/interfaces
 
     server06:
       kind: linux
-      image: networkop/host:ifreload
       binds:
       - evpn-mlag/server06/etc/network/interfaces:/etc/network/interfaces
 
